@@ -76,7 +76,7 @@ end
 local function connect_dns()
     local resolver = require "resty.dns.resolver"
     local r, err = resolver:new{
-        nameservers = {"1.1.1.1", {"8.8.4.4", 53} },
+        nameservers = {"1.1.1.1", "114.114.114.144", "8.8.8.8" },
         retrans = 5,  -- 5 retransmissions on receive timeout
         timeout = 2000,  -- 2 sec
     }
